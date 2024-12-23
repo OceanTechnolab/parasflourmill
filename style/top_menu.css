@@ -1,0 +1,29 @@
+body {} 
+/* MAIN NAV (LEVEL 1)
+------------------------------ */
+div#nav a			{ color: #312605;}
+div#nav ul			{ margin: 0; padding:0;}
+div#nav li			{ margin: 0; padding: 0px 12px 0px 13px; position: relative; list-style: none; float: left; text-align: center; background:url(../images/menu_div.jpg) no-repeat right top; }
+div#nav li a		{ display: block; text-decoration: none; color:#312605; }
+div#nav li a:hover		{ display: block; text-decoration: none; color:#6d591e; }
+
+/* DROP DOWN MENUS (LEVEL 2)
+------------------------------ */
+div#nav ul ul		{ display: none; position: absolute; margin:0px; padding:0px; z-index:1000; }
+div#nav ul ul li	{ width: 160px; text-align: left; padding: 2px 0px; border-bottom: 1px solid #eecb5f; border-right:0;  float:left; line-height:18px; background-image:none !important;}
+div#nav ul.level2	{ width: 160px; top: 50px; left: 0px; background-color:#c29200; }
+div#nav ul.level2	{ border-top: 1px solid #eecb5f;}
+div#nav ul.level2 a { padding-left: 12px;  padding-top: 2px; padding-bottom: 2px; color:#F7F9E3; font-size:12px; }
+div#nav ul.level2 a:hover { color:#312605;}
+
+/* DROP DOWN MENU EFFECT
+------------------------------ */
+div#nav 
+ul.level1  
+li.submenu:hover 
+ul.level2			{ display: block; margin-left: 0px; color:#312605; }
+
+/* ROLLOVER COLOR EFFECT
+------------------------------ */
+div#nav li:hover		 { font-weight: normal; background-color:#d3a20d;}
+div#nav li.submenu:hover { background:url(../images/menu_div.jpg) no-repeat right top !important; font-weight: normal;}

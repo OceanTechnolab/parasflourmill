@@ -1,0 +1,55 @@
+/* CSS Document */
+
+body { margin:0px; padding:0px;}
+h1,h2,h3,ul,p { margin:0px; padding:0px;}
+img { border:0px;}
+
+.wrapper { margin:0px auto; width:960px; background:url(../images/main_shadow.jpg) repeat-y; overflow:auto; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#333333; padding:0px 4px;}
+.top { float:left; width:960px; height:329px;}
+.top_left { float:left; width:256px; height:64px; background:url(../images/logo_top.jpg) no-repeat;}
+.logo { float:left; width:180px; height:42px; padding:20px 0px 0px 42px;}
+.top_phone { float:left; width:169px; padding:78px 0px 0px 82px; font-size:18px; color:#ffffff; font-family:Arial, Helvetica, sans-serif;}
+.menu_area { float:left; width:704px; height:64px; background:url(../images/menu_bg.jpg) repeat-x; font-size:13px; line-height:64px;}
+.banner { float:left; width:960px; height:265px; background:url(../images/banner_img.jpg) no-repeat;} 
+.middle_area { float:left; width:920px; padding:10px 20px 20px;}
+.middle { float:left; width:660px; padding-right:22px;}
+.header_area { float:left; width:660px; height:39px; padding-bottom:16px;}
+.header_left { float:left; width:17px; height:39px; background:url(../images/ele_mainhdr_left.jpg) no-repeat;}
+.header { float:left; width:635px; height:39px; background:url(../images/ele_mainhdr_bg.jpg) repeat-x;}
+.header_right { float:left; width:8px; height:39px; background:url(../images/ele_mainhdr_right.jpg) no-repeat;}
+.middle_text { float:left; width:100%; line-height:18px; text-align:justify;}
+.homeGallery_area { float:left; width:660px; padding-top:20px;}
+.homeGallery_top { float:left; width:660px; height:36px; background:url(../images/hdr_flourgallery.jpg) no-repeat}
+.homeGallery { float:left; width:640px; background:url(../images/ele_gallery_bg.jpg) repeat-y; padding:8px 10px 0px;}
+.homeGallery_bottom { float:left; width:660px; height:25px; background:url(../images/ele_gallery_btm.jpg) no-repeat;}
+.homeGallery_img { float:left; height:130px; padding-right:22px;}
+.right { float:left; width:238px; padding-top:10px;}
+.rightProduct_heading { float:left; width:238px; height:50px; background:url(../images/ele_product_hdr.jpg) no-repeat;}
+.rightProdcut { float:left; width:238px; background:url(../images/right_bg.jpg) repeat-y;}
+.rightProduct_link { float:left; width:205px; height:30px; background:url(../images/rightlinks_bg.jpg) no-repeat; padding-left:33px; line-height:30px; font-size:11px;}
+.rightProduct_bottom { float:left; width:238px; height:77px; background:url(../images/ele_product_btm.jpg) no-repeat;}
+.right_cotnactArea { float:left; width:238px; height:88px; padding-top:12px;}
+.right_contactLeft { float:left; width:10px; height:88px; background:url(../images/right_addLeft.jpg) no-repeat;}
+.right_contact { float:left; width:204px; height:81px; background:url(../images/right_addBg.jpg) repeat-x; padding:7px 6px 0px; color:#FFFFFF; line-height:15px;}
+.right_contact span { font-size:13px; font-weight:bold;}
+.right_contactRight { float:left; width:10px; height:88px; background:url(../images/right_addRight.jpg) no-repeat;}
+.footer_area { float:left; width:920px; height:44px; padding:20px 20px 0px; background:url(../images/footer_bg.jpg) repeat-x;}
+.footer { float:left; width:550px; color:#7e6109;}
+.copyright { float:left; width:550px; font-size:10px; padding-top:5px; color:#f8eabe;}
+.blueshark_text { float:right; width:270px; font-size:11px; color:#f8eabe; text-align:right;}
+.productBox_top { height:10px; background:url(../images/product_boxTop.jpg) no-repeat;}
+.productBox_middle { background:url(../images/product_boxBg.jpg) repeat-y; padding:10px; text-align:center;}
+.productBox_bottom { height:10px; background:url(../images/product_boxBottom.jpg) no-repeat;}
+.sitemapUl { padding-left:33px; color:#7E6109; line-height:20px; }
+h2.sitemap_heading { width:640px; padding-left:20px; font-size:12px; color:#7E6109;}
+
+
+/* Navigation styles*/
+
+.right_link,.right_link:link,.right_link:active,.right_link:visited { color:#333333; text-decoration:none; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.right_link:hover { color:#971114;}
+.white_link,.white_link:link,.white_link:active,.white_link:visited { color:#7e6109; text-decoration:none;}
+.white_link:hover { text-decoration:underline;}
+
+
+

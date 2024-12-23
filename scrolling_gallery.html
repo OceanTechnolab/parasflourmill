@@ -1,0 +1,189 @@
+<HTML>
+
+<!-- Mirrored from www.parasflourmill.com/scrolling_gallery.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Nov 2024 09:31:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<HEAD>
+<TITLE></TITLE>
+<link rel="stylesheet" type="text/css" href="js/jquery_scroller/imageScroller.css">
+</HEAD>
+<BODY >
+<div id="outerContainer">
+			   <div id="imageScroller">
+				<div id="viewer" class="js-disabled">
+				 					  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_87d94034e03781b4305e4429fed0a41e.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_d6ad0f07fe5abbfce9fc661f0118c99e.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_0cec9a77690ab6adf7c15ca774a23d42.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_6f3b59514c78853ad3246eb55976534b.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_a425acdfc7b5db502da8f225bfac03bf.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_39e3fbcce4aa6dad2897bb9332922169.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_2ca8253b7f59f1b690ac914b5268027a.png" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_14f7c0efaba16ba28568cf490df90739.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+								  <div class="homeGallery_img"><a class="wrapper" href="photo_galleryfa2a.html?pid=1" target="_parent" style="padding:22px;"><img src="uploaddir/portfolio/Img_abc216525bbeaeea4d1bd190cf7da103.jpg" alt="" width="96" height="130" style="border:1px solid #333333"/></a> </div>
+			 
+					<!--<div class="homeGallery_img"><img src="images/product_1.jpg" alt="Flour" /></div>
+					<div class="homeGallery_img"><img src="images/product_2.jpg" alt="Flour" /></div>
+					<div class="homeGallery_img"><img src="images/product_3.jpg" alt="Flour" /></div>
+					<div class="homeGallery_img"><img src="images/product_4.jpg" alt="Flour" /></div>
+					<div class="homeGallery_img"><img src="images/product_5.jpg" alt="Flour" /></div>-->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery_scroller/js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			
+			  //remove js-disabled class
+				$("#viewer").removeClass("js-disabled");
+			
+			  //create new container for images
+				$("<div>").attr("id", "container").css({ position:"absolute"}).width($(".wrapper").length * 170).height(170).appendTo("div#viewer");
+			  	
+				//add images to container
+				$(".wrapper").each(function() {
+					$(this).appendTo("div#container");
+				});
+				
+				//work out duration of anim based on number of images (1 second for each image)
+				var duration = $(".wrapper").length * 2000;
+				
+				//store speed for later (distance / time)
+				var speed = (parseInt($("div#container").width()) + parseInt($("div#viewer").width())) / duration;
+								
+				//set direction
+				var direction = "rtl";
+				
+				//set initial position and class based on direction
+				(direction == "rtl") ? $("div#container").css("left", $("div#viewer").width()).addClass("rtl") : $("div#container").css("left", 0 - $("div#container").width()).addClass("ltr") ;
+				
+				//animator function
+				var animator = function(el, time, dir) {
+				 
+					//which direction to scroll
+					if(dir == "rtl") {
+					  
+					  //add direction class
+						el.removeClass("ltr").addClass("rtl");
+					 		
+						//animate the el
+						el.animate({ left:"-" + el.width() + "px" }, time, "linear", function() {
+												
+							//reset container position
+							$(this).css({ left:$("div#imageScroller").width(), right:"" });
+							
+							//restart animation
+							animator($(this), duration, "rtl");
+							
+							//hide controls if visible
+							($("div#controls").length > 0) ? $("div#controls").slideUp("slow").remove() : null ;			
+											
+						});
+					} else {
+					
+					  //add direction class
+						el.removeClass("rtl").addClass("ltr");
+					
+						//animate the el
+						el.animate({ left:$("div#viewer").width() + "px" }, time, "linear", function() {
+												
+							//reset container position
+							$(this).css({ left:0 - $("div#container").width() });
+							
+							//restart animation
+							animator($(this), duration, "ltr");
+							
+							//hide controls if visible
+							($("div#controls").length > 0) ? $("div#controls").slideUp("slow").remove() : null ;			
+						});
+					}
+				}
+				
+				//start anim
+				animator($("div#container"), duration, direction);
+				
+				//pause on mouseover
+				$("a.wrapper").live("mouseover", function() {
+				  
+					//stop anim
+					$("div#container").stop(true);
+					
+					//show controls
+					($("div#controls").length == 0) ? $("<div>").attr("id", "controls").appendTo("div#outerContainer").css({ opacity:0.7 }).slideDown("slow") : null ;
+					($("a#rtl").length == 0) ? $("<a>").attr({ id:"rtl", href:"#", title:"rtl" }).appendTo("#controls") : null ;
+					($("a#ltr").length == 0) ? $("<a>").attr({ id:"ltr", href:"#", title:"ltr" }).appendTo("#controls") : null ;
+					
+					//variable to hold trigger element
+					var title = $(this).attr("title");
+					
+					//add p if doesn't exist, update it if it does
+					($("p#title").length == 0) ? $("<p>").attr("id", "title").text(title).appendTo("div#controls") : $("p#title").text(title) ;
+				});
+				
+				//restart on mouseout
+				$("a.wrapper").live("mouseout", function(e) {
+				  
+					//hide controls if not hovering on them
+					(e.relatedTarget == null) ? null : (e.relatedTarget.id != "controls") ? $("div#controls").slideUp("slow").remove() : null ;
+					
+					//work out total travel distance
+					var totalDistance = parseInt($("div#container").width()) + parseInt($("div#viewer").width());
+														
+					//work out distance left to travel
+					var distanceLeft = ($("div#container").hasClass("ltr")) ? totalDistance - (parseInt($("div#container").css("left")) + parseInt($("div#container").width())) : totalDistance - (parseInt($("div#viewer").width()) - (parseInt($("div#container").css("left")))) ;
+					
+					//new duration is distance left / speed)
+					var newDuration = distanceLeft / speed;
+				
+					//restart anim
+					animator($("div#container"), newDuration, $("div#container").attr("class"));
+
+				});
+												
+				//handler for ltr button
+				$("#ltr").live("click", function() {
+				 					
+					//stop anim
+					$("div#container").stop(true);
+				
+					//swap class names
+					$("div#container").removeClass("rtl").addClass("ltr");
+										
+					//work out total travel distance
+					var totalDistance = parseInt($("div#container").width()) + parseInt($("div#viewer").width());
+					
+					//work out remaining distance
+					var distanceLeft = totalDistance - (parseInt($("div#container").css("left")) + parseInt($("div#container").width()));
+					
+					//new duration is distance left / speed)
+					var newDuration = distanceLeft / speed;
+					
+					//restart anim
+					animator($("div#container"), newDuration, "ltr");
+				});
+				
+				//handler for rtl button
+				$("#rtl").live("click", function() {
+										
+					//stop anim
+					$("div#container").stop(true);
+					
+					//swap class names
+					$("div#container").removeClass("ltr").addClass("rtl");
+					
+					//work out total travel distance
+					var totalDistance = parseInt($("div#container").width()) + parseInt($("div#viewer").width());
+
+					//work out remaining distance
+					var distanceLeft = totalDistance - (parseInt($("div#viewer").width()) - (parseInt($("div#container").css("left"))));
+					
+					//new duration is distance left / speed)
+					var newDuration = distanceLeft / speed;
+				
+					//restart anim
+					animator($("div#container"), newDuration, "rtl");
+				});
+			});
+		</script>
+</BODY>
+
+<!-- Mirrored from www.parasflourmill.com/scrolling_gallery.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Nov 2024 09:32:02 GMT -->
+</HTML>
